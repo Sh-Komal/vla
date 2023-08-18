@@ -33,7 +33,7 @@ const Icons = () => {
   };
 
   return (
-    <section className="hero-section bg-green-70 py-10 my-0 mt-20">
+    <section className="hero-section bg-green-70 py-10 my-0 mt-20 overflow: hidden">
       <div className="container">
         <Slider {...settings}>
         <div className="text-center p-4">

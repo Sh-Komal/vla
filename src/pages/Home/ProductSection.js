@@ -93,7 +93,7 @@ function ProductSection() {
   };
 
   return (
-    <section className="bg-green-50">
+    <section className="bg-green-50 overflow: hidden">
       <h1 className="text-2xl text-center font-bold my-4 py-5">OUR PRODUCTS</h1>
       <Slider {...carouselSettings}>
         {categoryData.map((category) => (

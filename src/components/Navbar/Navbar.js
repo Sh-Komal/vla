@@ -9,6 +9,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const toggleMobileMenu = () => {
     setOpen(!open);
+    if (open) {
+      document.body.classList.remove("no-scroll");
+    } else {
+      document.body.classList.add("no-scroll");
+    }
   };
 
   const closeMobileMenu = () => {
@@ -42,10 +47,11 @@ const Navbar = () => {
           </div>
           {/* {Mobile nav } */}
           <ul
-            className={`
-        md:hidden bg-white fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
-        duration-500 ${open ? "left-0 mt-20" : "left-[-100%] mt-0"}
-        `}
+           className={`
+      md:hidden bg-white fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
+      duration-500 ${open ? "left-0 mt-20" : "left-[-100%] mt-0"}
+      ${open ? "no-scroll-menu-open" : ""}
+      `}
           >
             <li>
               <Link to="/" className="py-7 px-3 inline-block">
